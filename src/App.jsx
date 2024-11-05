@@ -1,27 +1,66 @@
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
 import ButtonGradient from "./assets/svg/ButtonGradient";
-import Benefits from "./components/Benefits";
-import Collaboration from "./components/Collaboration";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import PostJob from "./pages/PostJob";
+import Messages from "./pages/Messages";
+import MyBookings from "./pages/MyBookings";
+import FindService from "./pages/FindService";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
-import Services from "./components/Services";
+
+const Layout = () => {
+  return (
+    <div className="layout">
+      <Header /> {/* Add Header here */}
+      <Outlet />
+    </div>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/find-a-service",
+        element: <FindService />,
+      },
+      {
+        path: "/post-a-job",
+        element: <PostJob />,
+      },
+      {
+        path: "/messages",
+        element: <Messages />,
+      },
+      {
+        path: "/my-bookings",
+        element: <MyBookings />,
+      },
+    ],
+  },
+  {
+    path: "/signup",
+    element: <PostJob />, // You can replace with Signup component
+  },
+  {
+    path: "/login",
+    element: <PostJob />, // You can replace with Login component
+  },
+]);
 
 const App = () => {
   return (
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
-        <Hero />
-        <Benefits />
-        <Collaboration />
-        <Services />
-        <Pricing />
-        <Roadmap />
-        <Footer />
-      </div>
-
+      <RouterProvider router={router} />
       <ButtonGradient />
     </>
   );

@@ -39,37 +39,38 @@ import {
 export const navigation = [
   {
     id: "0",
-    title: "Features",
-    url: "#features",
+    title: "Find a service",
+    url: "/find-a-service", // Updated to a route path
   },
   {
     id: "1",
-    title: "Pricing",
-    url: "#pricing",
+    title: "Post a job",
+    url: "/post-a-job", // Updated to a route path
   },
   {
     id: "2",
-    title: "How to use",
-    url: "#how-to-use",
+    title: "Messages",
+    url: "/messages", // Updated to a route path
   },
   {
     id: "3",
-    title: "Roadmap",
-    url: "#roadmap",
+    title: "My bookings",
+    url: "/my-bookings", // Updated to a route path
   },
   {
     id: "4",
     title: "New account",
-    url: "#signup",
+    url: "/signup", // Already a route
     onlyMobile: true,
   },
   {
     id: "5",
     title: "Sign in",
-    url: "#login",
+    url: "/login", // Already a route
     onlyMobile: true,
   },
 ];
+
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
