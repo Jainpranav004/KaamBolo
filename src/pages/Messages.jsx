@@ -2,7 +2,7 @@ import React from 'react'
 
 const Messages = () => {
   return (
-    <div>Messages</div>
+    <section className="pt-[12rem] -mt-[5.25rem]">FindService</section>
   )
 }
 

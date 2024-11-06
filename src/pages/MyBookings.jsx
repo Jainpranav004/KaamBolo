@@ -2,7 +2,7 @@ import React from 'react'
 
 const MyBookings = () => {
   return (
-    <div>MyBookings</div>
+    <section className="pt-[12rem] -mt-[5.25rem]">FindService</section>
   )
 }
 

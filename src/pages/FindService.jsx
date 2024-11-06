@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const FindService = () => {
   return (
-    <div>FindService</div>
-  )
-}
+    <section className="pt-[12rem] -mt-[5.25rem]">FindService</section>
+  );
+};
 
-export default FindService
+export default FindService;
